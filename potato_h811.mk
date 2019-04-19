@@ -19,10 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
-
-# Inherit telephony stuff
-$(call inherit-product, vendor/aosp/config/telephony.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -36,7 +33,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := h811
-PRODUCT_NAME := aosp_h811
+PRODUCT_NAME := potato_h811
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-H811
 PRODUCT_MANUFACTURER := LGE
